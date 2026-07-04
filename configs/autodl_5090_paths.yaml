@@ -1,0 +1,93 @@
+schema_version: autodl_5090_handoff_paths_v0.1
+purpose: path template for future AutoDL RTX 5090 stage; do not execute training locally
+
+safety:
+  training_enabled: false
+  model_loading_enabled: false
+  lora_oft_enabled: false
+  closed_loop_eval_enabled: false
+  diffusion_policy_training_enabled: false
+  rl_training_enabled: false
+  local_stop_marker: "NEED_5090: 当前任务需要 AutoDL RTX 5090，不应在本地 3060 执行。"
+
+local_project:
+  windows_root: D:\中期\vla-uav-diffusion
+  wsl_root: /mnt/d/中期/vla-uav-diffusion
+  handoff_manifest: docs/autodl_5090_handoff_manifest.md
+
+autodl_project:
+  root: /root/autodl-tmp/vla-uav-diffusion
+  external_root: /root/autodl-tmp/vla-uav-diffusion/external
+  openvla_oft_root: /root/autodl-tmp/vla-uav-diffusion/external/openvla-oft
+  traveluav_repo_root: /root/autodl-tmp/vla-uav-diffusion/external/TravelUAV
+  aerovla_repo_root: /root/autodl-tmp/vla-uav-diffusion/external/AeroVLA
+
+data_paths:
+  full_traveluav_root: /root/autodl-tmp/datasets/TravelUAV
+  full_traveluav_downloads: /root/autodl-tmp/datasets/TravelUAV/_downloads
+  processed_root: /root/autodl-tmp/vla-uav-diffusion/data/processed
+  debug_jsonl: /root/autodl-tmp/vla-uav-diffusion/data/debug/traveluav_BrushifyCountryRoads_debug.jsonl
+  train_jsonl: /root/autodl-tmp/vla-uav-diffusion/data/processed/traveluav_train_openvla_oft.jsonl
+  val_jsonl: /root/autodl-tmp/vla-uav-diffusion/data/processed/traveluav_val_openvla_oft.jsonl
+  train_stats_json: /root/autodl-tmp/vla-uav-diffusion/data/processed/traveluav_train_stats.json
+
+model_paths:
+  openvla_base_checkpoint: /root/autodl-tmp/models/openvla-7b
+  openvla_oft_checkpoint: /root/autodl-tmp/models/openvla-oft
+  uav_action_head_output: /root/autodl-tmp/outputs/openvla-oft-uav/action_head
+  lora_oft_output: /root/autodl-tmp/outputs/openvla-oft-uav/lora_oft
+
+runtime_outputs:
+  logs_root: /root/autodl-tmp/vla-uav-diffusion/logs/5090
+  tensorboard_root: /root/autodl-tmp/outputs/openvla-oft-uav/tensorboard
+  eval_root: /root/autodl-tmp/outputs/openvla-oft-uav/eval
+  diffusion_policy_root: /root/autodl-tmp/outputs/openvla-oft-uav/diffusion_policy
+  rl_expert_root: /root/autodl-tmp/outputs/openvla-oft-uav/rl_expert
+
+uav_interface:
+  state_dim: 4
+  state_names: [x, y, z, yaw]
+  action_dim: 4
+  action_names: [vx, vy, vz, yaw_rate]
+  action_chunk_size: 8
+  yaw_unit: radian
+  dt_source: timestamp
+
+handoff_payload_include:
+  - README.md
+  - requirements.txt
+  - .gitignore
+  - configs/
+  - src/
+  - scripts/
+  - docs/
+  - data/debug/README.md
+  - data/debug/*.jsonl
+  - data/debug/*.json
+  - data/debug/plots/
+
+handoff_payload_exclude:
+  - .venv/
+  - external/
+  - data/raw/
+  - data/processed/
+  - logs/
+  - work/
+  - tools/
+  - openvla-7b/
+  - checkpoints/
+  - "*.safetensors"
+  - "*.bin"
+  - "*.pt"
+  - "*.pth"
+  - "*.ckpt"
+
+must_run_on_5090_later:
+  - full train/val TravelUAV conversion intended for training
+  - full train split statistics
+  - loading OpenVLA-OFT / openvla-7b
+  - UAV action head training
+  - LoRA / OFT fine-tuning
+  - closed-loop simulator evaluation
+  - Diffusion Policy training
+  - RL expert trajectory generation

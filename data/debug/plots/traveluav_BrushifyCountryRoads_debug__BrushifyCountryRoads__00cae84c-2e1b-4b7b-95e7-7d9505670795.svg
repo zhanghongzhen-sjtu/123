@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="24" y="30" font-family="Arial" font-size="16" fill="#111827">BrushifyCountryRoads / 00cae84c-2e1b-4b7b-95e7-7d9505670795</text>
+<text x="24" y="52" font-family="Arial" font-size="12" fill="#4b5563">steps=20 x=[-368.96,-365.88] y=[-289.26,-204.95]</text>
+<polyline points="440.86,560.00 441.27,548.77 441.68,537.15 442.16,524.30 443.19,496.56 444.27,467.28 445.34,438.08 446.41,408.83 447.48,379.63 448.55,350.53 449.61,321.45 450.66,292.48 451.72,263.39 452.78,234.35 453.84,205.25 454.90,176.24 455.96,147.16 457.02,118.15 458.08,89.05 459.14,60.00" fill="none" stroke="#2563eb" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="440.86" y1="560.00" x2="441.27" y2="548.73" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" />
+<polyline points="444.71,554.82 441.27,548.73 437.40,554.56" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="441.68" y1="537.15" x2="442.17" y2="524.25" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" />
+<polyline points="445.60,530.35 442.17,524.25 438.29,530.08" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="443.19" y1="496.56" x2="444.26" y2="467.30" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" />
+<polyline points="447.70,473.40 444.26,467.30 440.39,473.13" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="445.34" y1="438.08" x2="446.41" y2="408.82" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" />
+<polyline points="449.85,414.92 446.41,408.82 442.54,414.65" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="447.48" y1="379.63" x2="448.55" y2="350.44" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" />
+<polyline points="451.99,356.53 448.55,350.44 444.68,356.27" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="449.61" y1="321.45" x2="450.67" y2="292.34" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" />
+<polyline points="454.11,298.44 450.67,292.34 446.80,298.17" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="451.72" y1="263.39" x2="452.79" y2="234.29" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" />
+<polyline points="456.22,240.38 452.79,234.29 448.91,240.12" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="453.84" y1="205.25" x2="454.91" y2="176.14" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" />
+<polyline points="458.34,182.24 454.91,176.14 451.03,181.97" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="455.96" y1="147.16" x2="457.02" y2="118.05" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" />
+<polyline points="460.46,124.14 457.02,118.05 453.15,123.88" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="458.08" y1="89.05" x2="459.14" y2="59.94" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" />
+<polyline points="462.58,66.03 459.14,59.94 455.27,65.77" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="440.86" cy="560.00" r="4.5" fill="#16a34a"/>
+<circle cx="459.14" cy="60.00" r="4.5" fill="#111827"/>
+<text x="24" y="584" font-family="Arial" font-size="12" fill="#4b5563">blue: x-y trajectory, red: vx/vy action arrows, green: start, black: end</text>
+</svg>

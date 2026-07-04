@@ -1,0 +1,56 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+logs/
+data/raw/
+data/processed/
+work/downloads/
+tools/7zip/
+
+# Debug JSONL is intentionally small; keep it trackable if needed.
+!data/debug/
+!data/debug/README.md
+!data/debug/*.jsonl
+
+# External repositories are cloned locally and should not be committed here.
+external/
+
+# Heavy model/checkpoint artifacts must stay out of this local project.
+openvla-7b/
+checkpoints/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+
+# Large/raw data
+data/raw/
+external/
+handoff/
+work/
+
+# Model/cache/weights
+hf-cache/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# Secrets
+auth.json
+.env
+*.key
+
+# Runtime
+__pycache__/
+*.pyc
+.cache/
+wandb/
+runs/
+autodl_5090_handoff.tar.gz
+*.tar.gz

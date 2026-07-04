@@ -1,0 +1,88 @@
+schema_version: uav_openvla_pseudo_config_v0.1
+project:
+  name: vla-uav-diffusion
+  thesis_direction: OpenVLA-OFT to UAV visual-language-action navigation transfer
+  local_root_wsl: /mnt/d/中期/vla-uav-diffusion
+  local_root_windows: D:\中期\vla-uav-diffusion
+
+safety:
+  phase: local_debug_interface_only
+  training_enabled: false
+  model_loading_enabled: false
+  lora_oft_enabled: false
+  closed_loop_eval_enabled: false
+  simulator_enabled: false
+  diffusion_policy_training_enabled: false
+  rl_training_enabled: false
+  stop_marker: "NEED_5090: 当前任务需要 AutoDL RTX 5090，不应在本地 3060 执行。"
+
+external_repos:
+  openvla_oft_root: external/openvla-oft
+  traveluav_root: external/TravelUAV
+  aerovla_root: external/AeroVLA
+
+local_debug:
+  purpose: CPU-only adapter/schema smoke test on a small real TravelUAV subset.
+  training_ready: false
+  real_data_debug: true
+  image_root: .
+  jsonl_files:
+    - data/debug/traveluav_BrushifyCountryRoads_debug.jsonl
+  optional_jsonl_files:
+    - data/debug/traveluav_3maps_debug.jsonl
+    - data/debug/traveluav_BrushifyUrban_debug.jsonl
+    - data/debug/traveluav_Carla_Town02_debug.jsonl
+  stats_json: data/debug/traveluav_3maps_stats.json
+  validation_report: docs/jsonl_validation_report.md
+  adapter_smoke_report: docs/openvla_oft_adapter_smoke_report.md
+
+uav_interface:
+  state_names: [x, y, z, yaw]
+  state_dim: 4
+  action_names: [vx, vy, vz, yaw_rate]
+  action_dim: 4
+  action_chunk_size: 8
+  dt_source: timestamp
+  yaw_unit: radian
+
+openvla_oft_mapping:
+  vision: image_paths
+  language: instructions
+  proprio: states
+  single_step_action: actions
+  action_target: action_chunks
+  timing: dts
+  metadata: sources
+
+adapter_smoke:
+  batch_size: 8
+  normalize: true
+  check_images: true
+  expected_shapes:
+    states: [8, 4]
+    actions: [8, 4]
+    action_chunks: [8, 8, 4]
+    states_normalized: [8, 4]
+    actions_normalized: [8, 4]
+    action_chunks_normalized: [8, 8, 4]
+
+future_5090:
+  status: planned_only_do_not_run_locally
+  trigger_when:
+    - full_train_val_split_is_defined
+    - full_dataset_paths_are_on_training_storage
+    - openvla_oft_uav_dataset_adapter_is_ready
+    - normalization_stats_must_be_recomputed_for_full_train_split
+  planned_paths:
+    train_jsonl: data/processed/traveluav_train_openvla_oft.jsonl
+    val_jsonl: data/processed/traveluav_val_openvla_oft.jsonl
+    stats_json: data/processed/traveluav_train_stats.json
+    output_dir: logs/openvla_oft_uav/
+  requires_5090_for:
+    - loading OpenVLA-OFT / openvla-7b
+    - training UAV action head
+    - LoRA / OFT fine-tuning
+    - full train/val preprocessing and statistics for training
+    - closed-loop simulator evaluation
+    - Diffusion Policy training
+    - RL expert trajectory generation
