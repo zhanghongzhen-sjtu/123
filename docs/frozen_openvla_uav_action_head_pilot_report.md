@@ -15,26 +15,26 @@
   "batch_size": 1,
   "epochs": 3,
   "lr": 0.0001,
-  "initial_val_loss": 0.2424526154063642,
+  "initial_val_loss": 0.24488832242786884,
   "history": [
     {
       "epoch": 1,
-      "train_loss": 0.09250917481258511,
-      "val_loss": 0.5789309311658144,
+      "train_loss": 0.09229879413420955,
+      "val_loss": 0.4647023053839803,
       "train_steps": 120,
       "val_batches": 32
     },
     {
       "epoch": 2,
-      "train_loss": 0.03364898378786165,
-      "val_loss": 0.5619590431451797,
+      "train_loss": 0.03448989205644466,
+      "val_loss": 0.46726884320378304,
       "train_steps": 120,
       "val_batches": 32
     },
     {
       "epoch": 3,
-      "train_loss": 0.01544018703183004,
-      "val_loss": 0.3945161923766136,
+      "train_loss": 0.014567905115836766,
+      "val_loss": 0.3678198978304863,
       "train_steps": 120,
       "val_batches": 32
     }
