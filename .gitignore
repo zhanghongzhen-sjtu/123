@@ -54,3 +54,18 @@ wandb/
 runs/
 autodl_5090_handoff.tar.gz
 *.tar.gz
+
+# Generated experiment data
+data/debug/cloud_*.jsonl
+data/debug/predictions/
+data/debug/plots/
+data/processed/*.jsonl
+data/processed/*.json
+logs/
+checkpoints/
+
+# Model/data artifacts
+*.safetensors
+*.pt
+*.pth
+*.ckpt
