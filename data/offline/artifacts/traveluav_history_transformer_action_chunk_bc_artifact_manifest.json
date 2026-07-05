@@ -1,0 +1,39 @@
+{
+  "name": "traveluav_history_transformer_action_chunk_bc_baseline",
+  "created_at_utc": "2026-07-05T16:30:48.428755+00:00",
+  "status": "BC_HISTORY_TRANSFORMER_ACTION_CHUNK_PASS",
+  "model": "TransformerChunkBC",
+  "input": "history of [state(4), previous_action(4)]",
+  "output": "action_chunk [8, 4]",
+  "history_len": 16,
+  "train_samples": 298304,
+  "val_samples": 31898,
+  "epochs": 80,
+  "batch_size": 2048,
+  "best_epoch": 9,
+  "best_val_mse_norm": 0.4650172699980694,
+  "final_val_mse_norm": 0.5340721028446367,
+  "committed_files": [
+    "docs/traveluav_history_transformer_action_chunk_full_report.json",
+    "docs/traveluav_history_transformer_action_chunk_bc_report.md",
+    "data/offline/artifacts/traveluav_history_transformer_action_chunk_bc_artifact_manifest.json"
+  ],
+  "large_or_binary_files_not_committed": [
+    {
+      "path": "checkpoints/bc/traveluav_history_transformer_action_chunk_full_best.pt",
+      "exists": true,
+      "size_bytes": 19825531,
+      "sha256": "9bf8781ed9a82bd116f10872f4eb6798effefcb4b73431e8fc22ffaa4d2a26dc"
+    },
+    {
+      "path": "logs/bc/traveluav_history_transformer_action_chunk_full_train.log",
+      "reason": "runtime log, not needed in git"
+    }
+  ],
+  "safety": {
+    "openvla_training_started": false,
+    "lora_oft_training_started": false,
+    "diffusion_policy_training_started": false,
+    "real_airsim_rollout": false
+  }
+}
