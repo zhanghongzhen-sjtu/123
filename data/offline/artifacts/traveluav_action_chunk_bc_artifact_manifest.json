@@ -1,0 +1,28 @@
+{
+  "name": "traveluav_action_chunk_bc_baseline",
+  "created_at_utc": "2026-07-05T16:05:22.975045+00:00",
+  "status": "BC_ACTION_CHUNK_FULL_PASS",
+  "committed_files": [
+    "docs/traveluav_state_action_chunk_mlp_full_report.json",
+    "docs/traveluav_action_chunk_bc_baseline_report.md",
+    "data/offline/artifacts/traveluav_action_chunk_bc_artifact_manifest.json"
+  ],
+  "large_or_binary_files_not_committed": [
+    {
+      "path": "checkpoints/bc/traveluav_state_action_chunk_mlp_full_best.pt",
+      "exists": true,
+      "size_bytes": 1628469,
+      "sha256": "9dc3cbb6f4187def66f403c738b00791f640ebc0324d3cbf41682d334caad4a1"
+    },
+    {
+      "path": "logs/bc/traveluav_state_action_chunk_mlp_full_train.log",
+      "reason": "runtime log, not needed in git"
+    }
+  ],
+  "notes": [
+    "No OpenVLA/openvla-7b loaded.",
+    "No LoRA/OFT training.",
+    "No Diffusion Policy training.",
+    "No real AirSim rollout."
+  ]
+}

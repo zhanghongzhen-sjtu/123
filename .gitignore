@@ -69,3 +69,24 @@ checkpoints/
 *.pt
 *.pth
 *.ckpt
+
+# AutoDL large artifacts
+data/raw/
+data/processed/*.jsonl
+data/debug/*.jsonl
+data/debug/predictions/
+data/rl_debug/*.jsonl
+checkpoints/
+logs/
+external/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.zip
+*.z01
+*.z02
+*.z03
+*.z04
+*.z05
+autodl_5090_handoff.tar.gz

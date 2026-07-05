@@ -1,0 +1,19 @@
+{
+  "status": "ACTION_PREDICTION_PLOT_PASS",
+  "pred_jsonl": "data/debug/predictions/frozen_openvla_val_predictions.jsonl",
+  "rows": 64,
+  "action_chunk": 8,
+  "per_dim_mae": {
+    "vx": 0.6335176229476929,
+    "vy": 0.6503189206123352,
+    "vz": 0.12680019438266754,
+    "yaw_rate": 0.10257799178361893
+  },
+  "per_dim_rmse": {
+    "vx": 0.7674237489700317,
+    "vy": 0.8066935539245605,
+    "vz": 0.16505597531795502,
+    "yaw_rate": 0.13343091309070587
+  },
+  "out_dir": "data/debug/plots/frozen_openvla"
+}

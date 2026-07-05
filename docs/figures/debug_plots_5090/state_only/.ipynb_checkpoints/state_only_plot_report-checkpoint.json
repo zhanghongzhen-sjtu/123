@@ -1,0 +1,19 @@
+{
+  "status": "ACTION_PREDICTION_PLOT_PASS",
+  "pred_jsonl": "data/debug/predictions/state_only_val_predictions.jsonl",
+  "rows": 64,
+  "action_chunk": 8,
+  "per_dim_mae": {
+    "vx": 0.5746631622314453,
+    "vy": 0.5411788821220398,
+    "vz": 0.12612277269363403,
+    "yaw_rate": 0.06559379398822784
+  },
+  "per_dim_rmse": {
+    "vx": 0.7331687808036804,
+    "vy": 0.6932064890861511,
+    "vz": 0.15776297450065613,
+    "yaw_rate": 0.08724750578403473
+  },
+  "out_dir": "data/debug/plots/state_only"
+}
