@@ -1,0 +1,53 @@
+{
+  "status": "TRAVELUAV_OFFLINE_ARTIFACT_MANIFEST_READY",
+  "created_at": "2026-07-05T23:42:21.523638",
+  "host": "autodl-5090",
+  "project": "vla-uav-diffusion",
+  "notes": [
+    "Large JSONL/checkpoint artifacts are intentionally not committed to GitHub.",
+    "GitHub stores lightweight reports, stats, and manifest only.",
+    "These artifacts are offline supervised/BC artifacts, not real AirSim online rollout trajectories."
+  ],
+  "artifacts": [
+    {
+      "path": "data/offline/traveluav_offline_supervised_allmaps_1000ep.jsonl",
+      "exists": true,
+      "bytes": 737152247,
+      "mb": 703.0,
+      "sha256": "b21a4337fa3759da98268de61250ad5f2e875a784116f91d912455a2d26b9e46",
+      "modified_time": "2026-07-05T23:07:39.728049"
+    },
+    {
+      "path": "data/offline/splits/traveluav_offline_supervised_train.jsonl",
+      "exists": true,
+      "bytes": 666005185,
+      "mb": 635.15,
+      "sha256": "4c689d2ac769f987819929bb03644f86ace0cf76c3f6144b73a117ef17db559b",
+      "modified_time": "2026-07-05T23:13:47.151546"
+    },
+    {
+      "path": "data/offline/splits/traveluav_offline_supervised_val.jsonl",
+      "exists": true,
+      "bytes": 71147062,
+      "mb": 67.85,
+      "sha256": "c837936ce2176a5351867321cec90a5f6d0a936be099fa285ac9ad46703087a3",
+      "modified_time": "2026-07-05T23:13:47.151546"
+    },
+    {
+      "path": "checkpoints/bc/traveluav_state_action_mlp_split_full.pt",
+      "exists": true,
+      "bytes": 409563,
+      "mb": 0.39,
+      "sha256": "ac4788ea4cba789bf7cffd59af31abf532a61f1e51b12f2e033bf170731e6911",
+      "modified_time": "2026-07-05T23:21:09.754719"
+    },
+    {
+      "path": "checkpoints/bc/traveluav_state_action_mlp_split_full_best.pt",
+      "exists": true,
+      "bytes": 409589,
+      "mb": 0.39,
+      "sha256": "d880189b9af3ab7ef74e9e071bd2d3355b016ce43e3c4269228b967eb37a9d65",
+      "modified_time": "2026-07-05T23:21:08.078723"
+    }
+  ]
+}
