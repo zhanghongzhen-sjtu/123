@@ -1,0 +1,10 @@
+{
+  "source": "data/offline/traveluav_offline_supervised_allmaps_1000ep.jsonl",
+  "train_jsonl": "data/offline/splits/traveluav_offline_supervised_train.jsonl",
+  "val_jsonl": "data/offline/splits/traveluav_offline_supervised_val.jsonl",
+  "episodes_total": 6631,
+  "episodes_train": 5967,
+  "episodes_val": 664,
+  "split": "episode_level",
+  "seed": 42
+}
